@@ -38,7 +38,11 @@ const Navbar = () => {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-heading font-semibold text-foreground hover:text-primary-light transition-colors"
+                className={`text-sm font-heading font-semibold transition-colors ${
+                  scrolled
+                    ? "text-foreground hover:text-primary-light"
+                    : "text-primary-foreground hover:text-accent"
+                }`}
               >
                 {link.label}
               </a>
@@ -57,7 +61,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-foreground"
+          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
