@@ -6,6 +6,7 @@ import {
   Shirt,
   Blinds,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const services = [
@@ -50,33 +51,42 @@ const services = [
 const Services = () => (
   <section id="services" className="py-20 md:py-28 bg-alt">
     <div className="container">
-      <AnimatedSection>
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Nos Services
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Des prestations de nettoyage complètes et personnalisées pour répondre à tous vos besoins.
-          </p>
-        </div>
-      </AnimatedSection>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        {/* Left - intro text */}
+        <AnimatedSection>
+          <div className="lg:sticky lg:top-28">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+              Ce que nous faisons
+            </h2>
+            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+              Plus de cinq ans d'expérience dans le nettoyage résidentiel et commercial. Nous proposons plusieurs options adaptées à vos besoins.
+            </p>
+            <Button variant="accent" size="lg" asChild>
+              <a href="#contact">Voir les détails</a>
+            </Button>
+          </div>
+        </AnimatedSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service, i) => (
-          <AnimatedSection key={service.title} delay={i * 0.1}>
-            <div className="group bg-card rounded-xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border h-full">
-              <div className="w-12 h-12 rounded-lg bg-accent/15 flex items-center justify-center mb-5 group-hover:bg-accent/25 transition-colors">
-                <service.icon className="text-accent" size={24} />
+        {/* Right - service cards */}
+        <div className="space-y-4">
+          {services.map((service, i) => (
+            <AnimatedSection key={service.title} delay={i * 0.08}>
+              <div className="group bg-card rounded-xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-border flex items-start gap-5">
+                <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                  <service.icon className="text-accent" size={22} />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold mb-1 text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-foreground">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          </AnimatedSection>
-        ))}
+            </AnimatedSection>
+          ))}
+        </div>
       </div>
     </div>
   </section>
