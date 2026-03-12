@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import cleaningTools from "@/assets/cleaning-tools.png";
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex flex-col bg-background overflow-hidden">
@@ -20,13 +19,6 @@ const Hero = () => (
     <div className="container relative z-10 flex-1 flex flex-col justify-center pt-28 pb-40 md:pb-48">
       <AnimatedSection>
         <div className="max-w-2xl">
-          <div className="flex items-center gap-3 mb-6">
-            <img
-              src="/images/logo-zonet.png"
-              alt="ZONET"
-              className="h-10 md:h-12"
-            />
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
             Service de nettoyage{" "}
             <span className="text-primary">professionnel garanti</span>
@@ -53,16 +45,6 @@ const Hero = () => (
       </AnimatedSection>
     </div>
 
-    {/* Cleaning tools image */}
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl z-20 pointer-events-none">
-      <img
-        src={cleaningTools}
-        alt="Outils de nettoyage professionnels"
-        className="w-full h-auto object-contain"
-      />
-    </div>
-
-    {/* Bottom blue band behind image */}
     <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-primary z-10" />
   </section>
 );
