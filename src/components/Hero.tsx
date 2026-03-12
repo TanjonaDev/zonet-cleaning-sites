@@ -45,16 +45,6 @@ const Hero = () => (
       </AnimatedSection>
     </div>
 
-    {/* Cleaning tools image */}
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl z-20 pointer-events-none">
-      <img
-        src={cleaningTools}
-        alt="Outils de nettoyage professionnels"
-        className="w-full h-auto object-contain"
-      />
-    </div>
-
-    {/* Bottom blue band behind image */}
     <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-primary z-10" />
   </section>
 );
