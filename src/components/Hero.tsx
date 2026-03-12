@@ -19,13 +19,6 @@ const Hero = () => (
     <div className="container relative z-10 flex-1 flex flex-col justify-center pt-28 pb-40 md:pb-48">
       <AnimatedSection>
         <div className="max-w-2xl">
-          <div className="flex items-center gap-3 mb-6">
-            <img
-              src="/images/logo-zonet.png"
-              alt="ZONET"
-              className="h-10 md:h-12"
-            />
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
             Service de nettoyage{" "}
             <span className="text-primary">professionnel garanti</span>
