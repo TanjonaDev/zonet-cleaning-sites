@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import cleaningTools from "@/assets/cleaning-tools.png";
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex flex-col bg-background overflow-hidden">
