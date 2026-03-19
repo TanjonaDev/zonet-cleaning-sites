@@ -3,16 +3,14 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex flex-col bg-background overflow-hidden">
-    {/* Diagonal blue shapes */}
-    <div className="absolute top-0 right-0 w-[60%] h-full overflow-hidden pointer-events-none">
-      <div
-        className="absolute -top-20 -right-20 w-[120%] h-[70%] bg-primary origin-top-right"
-        style={{ transform: "rotate(-12deg) translateX(10%)" }}
+    {/* Background image - plein écran sur mobile, moitié droite sur desktop */}
+    <div className="absolute top-0 right-0 w-full md:w-[45%] h-full pointer-events-none overflow-hidden">
+      <img
+        src="/images/hero-bg.png"
+        alt=""
+        className="w-full h-full object-cover hero-img"
       />
-      <div
-        className="absolute top-[15%] -right-10 w-[100%] h-[60%] bg-primary-light/80 origin-top-right"
-        style={{ transform: "rotate(-8deg) translateX(15%)" }}
-      />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30 md:via-background/40 md:to-transparent" />
     </div>
 
     {/* Content */}

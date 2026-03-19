@@ -11,7 +11,7 @@ const serviceOptions = [
 ];
 
 const ServiceBar = () => (
-  <section className="relative z-30 -mt-12 md:-mt-14 mb-8">
+  <section className="relative z-30 -mt-12 md:-mt-14 pb-8 bg-alt">
     <div className="container">
       <AnimatedSection>
         <div className="bg-card rounded-2xl shadow-lg border border-border p-6 md:p-8 flex flex-col md:flex-row items-center gap-4 md:gap-8">

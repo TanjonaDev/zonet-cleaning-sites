@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import ServiceBar from "@/components/ServiceBar";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Clients from "@/components/Clients";
 import PhoneBand from "@/components/PhoneBand";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -12,9 +12,9 @@ const Index = () => (
     <Navbar />
     <main>
       <Hero />
-      <ServiceBar />
       <Services />
       <WhyChooseUs />
+      <Clients />
       <PhoneBand />
       <ContactForm />
     </main>

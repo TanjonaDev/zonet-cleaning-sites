@@ -50,6 +50,23 @@
   }
 }
 
+/* Hero image focal point — femme nettoyant la vitre */
+.hero-img {
+  object-position: 7% 30%; /* mobile : cadré à droite, mi-hauteur */
+}
+
+@media (min-width: 640px) {
+  .hero-img {
+    object-position: 30% 30%; /* sm : on recule légèrement */
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    object-position: 30% 30%; /* md+ : image dans le conteneur droit 45% */
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "Accueil", href: "#" },
   { label: "Services", href: "#services" },
   { label: "Pourquoi nous", href: "#pourquoi" },
   { label: "Contact", href: "#contact" },
@@ -19,8 +20,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
+        scrolled ? "shadow-md" : ""
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
@@ -38,11 +39,7 @@ const Navbar = () => {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-sm font-heading font-semibold transition-colors ${
-                  scrolled
-                    ? "text-foreground hover:text-primary-light"
-                    : "text-primary-foreground hover:text-accent"
-                }`}
+                className="text-sm font-heading font-semibold text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {link.label}
               </a>
@@ -51,7 +48,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="inline-flex h-10 px-5 items-center justify-center rounded-lg bg-accent text-accent-foreground font-heading font-semibold text-sm shadow-md hover:bg-accent/90 transition-all"
+              className="inline-flex h-10 px-6 items-center justify-center rounded-full border-2 border-gray-800 text-gray-800 font-heading font-semibold text-sm hover:bg-gray-800 hover:text-white transition-all"
             >
               Devis gratuit
             </a>
@@ -61,7 +58,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className="md:hidden p-2 text-gray-800"
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -70,14 +67,14 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border">
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-md">
           <ul className="flex flex-col p-4 gap-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-sm font-heading font-semibold text-foreground hover:text-primary-light"
+                  className="block py-2 text-sm font-heading font-semibold text-gray-700 hover:text-blue-600"
                 >
                   {link.label}
                 </a>
@@ -87,7 +84,7 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="block text-center py-2.5 rounded-lg bg-accent text-accent-foreground font-heading font-semibold text-sm"
+                className="block text-center py-2.5 rounded-full border-2 border-gray-800 text-gray-800 font-heading font-semibold text-sm hover:bg-gray-800 hover:text-white transition-all"
               >
                 Devis gratuit
               </a>
