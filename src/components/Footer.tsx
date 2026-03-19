@@ -12,7 +12,7 @@ const Footer = () => (
             className="h-9 mb-4 brightness-0 invert"
           />
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
-            Nettoyage tout corps d'état. Services professionnels pour particuliers et entreprises.
+            Nettoyage tout corps d'état depuis plus de 30 ans. On s'occupe de vos espaces — vous profitez de votre temps.
           </p>
         </div>
 

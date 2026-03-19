@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -14,13 +14,35 @@ const serviceOptions = [
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
+
     const data = new FormData(e.currentTarget);
     const values = Object.fromEntries(data.entries());
-    console.log("Form submission:", values);
-    setSubmitted(true);
+
+    try {
+      const res = await fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        const json = await res.json();
+        throw new Error(json.error ?? "Erreur inconnue.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,10 +51,10 @@ const ContactForm = () => {
         <AnimatedSection>
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Demandez votre devis gratuit
+              On vous répond sous 24h
             </h2>
             <p className="text-muted-foreground">
-              Remplissez le formulaire ci-dessous et nous vous répondrons sous 24h.
+              Dites-nous ce dont vous avez besoin, on vous prépare un devis gratuit et sans engagement.
             </p>
           </div>
         </AnimatedSection>
@@ -43,9 +65,9 @@ const ContactForm = () => {
               <div className="w-16 h-16 rounded-full bg-accent/15 flex items-center justify-center mx-auto mb-5">
                 <Send className="text-accent" size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Merci pour votre demande !</h3>
+              <h3 className="text-xl font-bold text-foreground mb-2">C'est envoyé, merci !</h3>
               <p className="text-muted-foreground">
-                Nous avons bien reçu votre message. Notre équipe vous contactera dans les plus brefs délais.
+                Votre demande est bien reçue. Un membre de l'équipe ZONET vous recontacte dans les 24h — un email de confirmation vient de vous être envoyé.
               </p>
             </div>
           ) : (
@@ -128,9 +150,13 @@ const ContactForm = () => {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
-                <Send size={18} />
-                Envoyer ma demande
+              {error && (
+                <p className="text-sm text-destructive text-center">{error}</p>
+              )}
+
+              <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                {loading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+                {loading ? "Envoi en cours…" : "Envoyer ma demande"}
               </Button>
             </form>
           )}

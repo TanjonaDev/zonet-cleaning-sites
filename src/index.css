@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -52,12 +52,18 @@
 
 /* Hero image focal point — femme nettoyant la vitre */
 .hero-img {
-  object-position: 7% 30%; /* mobile : cadré à droite, mi-hauteur */
+  object-position: 72% 20%; /* < 640px : cadré sur la femme à droite */
+}
+
+@media (min-width: 400px) {
+  .hero-img {
+    object-position: 16% 20%; /* sm : centre légèrement */
+  }
 }
 
 @media (min-width: 640px) {
   .hero-img {
-    object-position: 30% 30%; /* sm : on recule légèrement */
+    object-position: 50% 20%; /* sm : centre légèrement */
   }
 }
 
@@ -76,7 +82,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-bold text-primary;
   }
 }

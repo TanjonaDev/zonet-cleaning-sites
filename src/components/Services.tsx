@@ -14,37 +14,37 @@ const services = [
     icon: Home,
     title: "Ménage régulier à domicile",
     description:
-      "Un intérieur toujours propre grâce à nos interventions régulières adaptées à votre rythme.",
+      "Votre maison toujours prête à vivre. On intervient selon la fréquence qui vous convient — hebdomadaire, bi-mensuelle ou à la demande.",
   },
   {
     icon: Building2,
     title: "Nettoyage de bureaux et locaux",
     description:
-      "Des espaces de travail impeccables pour le bien-être de vos équipes et l'image de votre entreprise.",
+      "Un espace de travail propre, c'est une équipe qui se sent bien et une image soignée pour vos clients. On s'en charge, avant ou après vos horaires.",
   },
   {
     icon: SprayCanIcon,
     title: "Grand ménage de printemps",
     description:
-      "Un nettoyage en profondeur pour redonner un coup de frais à votre logement ou vos locaux.",
+      "Nettoyage en profondeur de fond en comble : placards, joints, recoins oubliés… On repart seulement quand tout brille.",
   },
   {
     icon: HardHat,
     title: "Nettoyage après travaux",
     description:
-      "Élimination complète de la poussière et des résidus de chantier pour un espace prêt à vivre.",
+      "Peinture, plâtre, poussière de chantier — on efface toutes les traces pour que vous puissiez profiter de votre espace comme si de rien n'était.",
   },
   {
     icon: Shirt,
     title: "Repassage à domicile",
     description:
-      "Un service de repassage soigné, directement chez vous, pour un linge impeccable.",
+      "Fini la corvée de repassage. On s'occupe de votre linge directement chez vous, avec soin et dans les règles de l'art.",
   },
   {
     icon: Blinds,
     title: "Nettoyage de vitres",
     description:
-      "Des vitres étincelantes, sans traces, grâce à nos techniques professionnelles.",
+      "Vitres, baies vitrées, velux — sans traces, sans auréoles, avec une visibilité parfaite. Pour voir la vie en clair.",
   },
 ];
 
@@ -56,13 +56,13 @@ const Services = () => (
         <AnimatedSection>
           <div className="lg:sticky lg:top-28">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Ce que nous faisons
+              Ce qu'on fait, <br className="hidden md:block" />et on le fait bien.
             </h2>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Plus de cinq ans d'expérience dans le nettoyage résidentiel et commercial. Nous proposons plusieurs options adaptées à vos besoins.
+              Que ce soit chez vous ou dans vos locaux professionnels, ZONET propose une gamme complète de prestations sur mesure — avec le même niveau d'exigence à chaque intervention.
             </p>
             <Button variant="accent" size="lg" asChild>
-              <a href="#contact">Voir les détails</a>
+              <a href="#contact">Demander un devis gratuit</a>
             </Button>
           </div>
         </AnimatedSection>

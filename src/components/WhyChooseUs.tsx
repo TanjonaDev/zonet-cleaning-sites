@@ -4,23 +4,23 @@ import AnimatedSection from "@/components/AnimatedSection";
 const reasons = [
   {
     icon: ShieldCheck,
-    title: "Équipe de confiance",
-    description: "Personnel vérifié, formé et assuré pour votre tranquillité.",
+    title: "Équipe vérifiée & assurée",
+    description: "Chaque intervenant est sélectionné, formé et couvert par notre assurance. Vous nous ouvrez votre porte, on le sait.",
   },
   {
     icon: Leaf,
-    title: "Produits écologiques",
-    description: "Des produits respectueux de l'environnement et de votre santé.",
+    title: "Produits éco-responsables",
+    description: "On utilise des produits certifiés, sans produits chimiques agressifs — pour votre santé et celle de la planète.",
   },
   {
     icon: Clock,
-    title: "Devis sous 24h",
-    description: "Réponse rapide et devis gratuit pour toute demande.",
+    title: "Devis gratuit sous 24h",
+    description: "On répond vite. Envoyez votre demande le soir, vous avez votre devis le lendemain matin.",
   },
   {
     icon: ThumbsUp,
-    title: "Satisfaction garantie",
-    description: "Nous ne partons pas tant que vous n'êtes pas satisfait.",
+    title: "100% satisfait ou on revient",
+    description: "Si quelque chose ne vous convient pas, on revient le corriger sans frais supplémentaires. Simple.",
   },
 ];
 
@@ -30,10 +30,10 @@ const WhyChooseUs = () => (
       <AnimatedSection>
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Pourquoi nous choisir
+            Pourquoi choisir ZONET ?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Des valeurs solides au service de votre satisfaction.
+            Parce qu'on ne fait pas juste le ménage — on prend soin de vos espaces comme si c'était les nôtres.
           </p>
         </div>
       </AnimatedSection>
