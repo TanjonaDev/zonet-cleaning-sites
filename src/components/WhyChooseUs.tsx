@@ -4,23 +4,23 @@ import AnimatedSection from "@/components/AnimatedSection";
 const reasons = [
   {
     icon: ShieldCheck,
-    title: "Équipe vérifiée & assurée",
-    description: "Chaque intervenant est sélectionné, formé et couvert par notre assurance. Vous nous ouvrez votre porte, on le sait.",
+    title: "Expertise réseau & multi-sites",
+    description: "On gère l'entretien de plusieurs points de vente simultanément, avec la même rigueur sur chaque site.",
   },
   {
     icon: Leaf,
-    title: "Produits éco-responsables",
-    description: "On utilise des produits certifiés, sans produits chimiques agressifs — pour votre santé et celle de la planète.",
+    title: "Produits conformes aux normes",
+    description: "Produits certifiés adaptés aux environnements médicaux et commerciaux — sans risque pour vos équipes ni vos clients.",
   },
   {
     icon: Clock,
-    title: "Devis gratuit sous 24h",
-    description: "On répond vite. Envoyez votre demande le soir, vous avez votre devis le lendemain matin.",
+    title: "Interventions hors horaires",
+    description: "On s'adapte à vos plages d'ouverture. Tôt le matin, tard le soir, le week-end — sans jamais gêner votre activité.",
   },
   {
     icon: ThumbsUp,
-    title: "100% satisfait ou on revient",
-    description: "Si quelque chose ne vous convient pas, on revient le corriger sans frais supplémentaires. Simple.",
+    title: "Interlocuteur dédié & réactif",
+    description: "Un contact unique pour tous vos sites. Un problème signalé, une intervention planifiée dans les 24h.",
   },
 ];
 
@@ -30,10 +30,10 @@ const WhyChooseUs = () => (
       <AnimatedSection>
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Pourquoi choisir ZONET ?
+            Pourquoi les réseaux choisissent ZONET ?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Parce qu'on ne fait pas juste le ménage — on prend soin de vos espaces comme si c'était les nôtres.
+            Parce qu'une chaîne de magasins ou de pharmacies n'a pas le droit à l'approximation. Ni sur l'hygiène, ni sur la discrétion, ni sur la ponctualité.
           </p>
         </div>
       </AnimatedSection>

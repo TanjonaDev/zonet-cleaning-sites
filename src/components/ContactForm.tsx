@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const serviceOptions = [
-  "Ménage régulier à domicile",
-  "Nettoyage de bureaux et locaux",
-  "Grand ménage de printemps",
-  "Nettoyage après travaux",
-  "Repassage à domicile",
-  "Nettoyage de vitres",
+  "Réseau de magasins / points de vente",
+  "Officine pharmaceutique",
+  "Nettoyage de vitrines & devantures",
+  "Désinfection & hygiène renforcée",
+  "Nettoyage après travaux / ouverture",
+  "Contrat d'entretien régulier",
 ];
 
 const ContactForm = () => {
@@ -26,7 +26,7 @@ const ContactForm = () => {
     const values = Object.fromEntries(data.entries());
 
     try {
-      const res = await fetch("/.netlify/functions/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -51,10 +51,10 @@ const ContactForm = () => {
         <AnimatedSection>
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              On vous répond sous 24h
+              Parlons de vos points de vente
             </h2>
             <p className="text-muted-foreground">
-              Dites-nous ce dont vous avez besoin, on vous prépare un devis gratuit et sans engagement.
+              Indiquez-nous votre réseau et vos besoins — on revient vers vous sous 24h avec une proposition adaptée, sans engagement.
             </p>
           </div>
         </AnimatedSection>
@@ -128,7 +128,7 @@ const ContactForm = () => {
                   required
                   className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 >
-                  <option value="">Sélectionnez un service</option>
+                  <option value="">Type de point de vente / besoin</option>
                   {serviceOptions.map((s) => (
                     <option key={s} value={s}>
                       {s}

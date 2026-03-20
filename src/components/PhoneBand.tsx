@@ -11,7 +11,7 @@ const PhoneBand = () => (
               <Phone className="text-accent" size={22} />
             </div>
             <p className="text-primary-foreground/80 text-lg font-heading font-semibold">
-              Vous préférez nous parler directement ?
+              Vous gérez un réseau ? Parlons-en directement.
             </p>
           </div>
           <a

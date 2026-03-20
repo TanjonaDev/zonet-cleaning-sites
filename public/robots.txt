@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /dist/
 
-Sitemap: https://www.zonet.fr/sitemap.xml
+Sitemap: https://zonet-iota.vercel.app/sitemap.xml

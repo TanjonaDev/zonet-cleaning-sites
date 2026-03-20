@@ -1,50 +1,50 @@
 import {
-  Home,
-  Building2,
+  ShoppingBag,
+  FlaskConical,
   SprayCanIcon,
   HardHat,
-  Shirt,
   Blinds,
+  CalendarClock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const services = [
   {
-    icon: Home,
-    title: "Ménage régulier à domicile",
+    icon: ShoppingBag,
+    title: "Nettoyage de points de vente",
     description:
-      "Votre maison toujours prête à vivre. On intervient selon la fréquence qui vous convient — hebdomadaire, bi-mensuelle ou à la demande.",
+      "Sols, vitrines, cabines d'essayage, caisses — on entretient vos espaces de vente avant l'ouverture ou après la fermeture, sans perturber votre activité.",
   },
   {
-    icon: Building2,
-    title: "Nettoyage de bureaux et locaux",
+    icon: FlaskConical,
+    title: "Nettoyage de pharmacies",
     description:
-      "Un espace de travail propre, c'est une équipe qui se sent bien et une image soignée pour vos clients. On s'en charge, avant ou après vos horaires.",
+      "Protocoles d'hygiène stricts, produits adaptés aux environnements médicaux. Vos pharmacies restent conformes et accueillantes pour vos patients.",
   },
   {
     icon: SprayCanIcon,
-    title: "Grand ménage de printemps",
+    title: "Désinfection & hygiène renforcée",
     description:
-      "Nettoyage en profondeur de fond en comble : placards, joints, recoins oubliés… On repart seulement quand tout brille.",
+      "Désinfection complète des surfaces de contact, zones sensibles et espaces partagés. Essentiel pour les réseaux soumis aux normes sanitaires.",
   },
   {
     icon: HardHat,
-    title: "Nettoyage après travaux",
+    title: "Nettoyage après travaux / ouverture",
     description:
-      "Peinture, plâtre, poussière de chantier — on efface toutes les traces pour que vous puissiez profiter de votre espace comme si de rien n'était.",
-  },
-  {
-    icon: Shirt,
-    title: "Repassage à domicile",
-    description:
-      "Fini la corvée de repassage. On s'occupe de votre linge directement chez vous, avec soin et dans les règles de l'art.",
+      "Rénovation, aménagement ou ouverture d'un nouveau point de vente — on remet vos locaux en état pour accueillir vos clients dès le premier jour.",
   },
   {
     icon: Blinds,
-    title: "Nettoyage de vitres",
+    title: "Nettoyage de vitres & devantures",
     description:
-      "Vitres, baies vitrées, velux — sans traces, sans auréoles, avec une visibilité parfaite. Pour voir la vie en clair.",
+      "Vitrines commerciales, devantures, baies vitrées — sans traces ni auréoles. Une façade impeccable, c'est la première impression que vous donnez.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Contrats d'entretien régulier",
+    description:
+      "Passages hebdomadaires ou quotidiens selon vos besoins. Un interlocuteur dédié, un planning fixe, zéro surprise.",
   },
 ];
 
@@ -56,10 +56,10 @@ const Services = () => (
         <AnimatedSection>
           <div className="lg:sticky lg:top-28">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Ce qu'on fait, <br className="hidden md:block" />et on le fait bien.
+              Des prestations taillées pour les chaînes de magasins.
             </h2>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Que ce soit chez vous ou dans vos locaux professionnels, ZONET propose une gamme complète de prestations sur mesure — avec le même niveau d'exigence à chaque intervention.
+              Chaînes d'optique, pharmacies, enseignes retail — ZONET intervient là où l'hygiène n'est pas une option. Chaque prestation est adaptée à vos contraintes horaires, réglementaires et d'image.
             </p>
             <Button variant="accent" size="lg" asChild>
               <a href="#contact">Demander un devis gratuit</a>
